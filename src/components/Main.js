@@ -27,12 +27,13 @@ function Main(props) {
     <main>
       <Header link="/signin" linkText="Выйти" email={currentEmail} />
       <section className="profile">
-        <div className="profile__edit-icon">
+        <div className="profile__edit-icon"
+        onClick={props.onEditAvatar}
+        >
           <img
             src={iconEdit}
             alt=""
             className="profile__edit-icon-image"
-            onClick={props.onEditAvatar}
           />
         </div>
         <img

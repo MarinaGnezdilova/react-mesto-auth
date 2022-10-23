@@ -9,6 +9,7 @@
   align-items: center;
   justify-content: center;
   transition: opacity 0.2s linear;
+  cursor: pointer;
 }
 .profile__edit-icon:hover {
   opacity: 0.8;

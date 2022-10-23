@@ -91,8 +91,6 @@ function App() {
       .editProfile(formData)
       .then((formData) => {
         setCurrentUser(formData);
-      })
-      .then(() => {
         closeAllPopups();
       })
       .catch((e) => {
@@ -105,8 +103,6 @@ function App() {
       .changeAvatar(avatar.avatar.value)
       .then((avatar) => {
         setCurrentUser(avatar);
-      })
-      .then(() => {
         closeAllPopups();
       })
       .catch((e) => {
@@ -130,8 +126,6 @@ function App() {
       .addCard(formData)
       .then((newCard) => {
         setCards([newCard, ...currentCards]);
-      })
-      .then(() => {
         closeAllPopups();
       })
       .catch((e) => {

@@ -2,10 +2,16 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import * as auth from "../components/Auth.js";
 import Header from "./Header.js";
+import InfoTooltip from "./InfoTooltip.js";
 function Login(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const history = useHistory();
+  const [isLoginFailed, setIsLoginFailed] = useState(false);
+
+  function onLoginFailedPopupClosed() {
+    setIsLoginFailed(false);
+  }
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -17,12 +23,20 @@ function Login(props) {
         history.push("/");
       })
       .catch((e) => {
-        alert("Проверьте логин и пароль");
+        setIsLoginFailed(true);
       });
   }
+  console.log(email);
 
   return (
     <div>
+      <InfoTooltip
+        name="popup-fail-register"
+        title="Что-то пошло не так!
+                Попробуйте ещё раз."
+        onClose={onLoginFailedPopupClosed}
+        isOpen={isLoginFailed}
+      />
       <Header link="/signup" linkText="Регистрация" />
       <div className="enter">
         <h1 className="enter__title ">Вход</h1>
