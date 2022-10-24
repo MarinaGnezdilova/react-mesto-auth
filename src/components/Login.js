@@ -26,7 +26,6 @@ function Login(props) {
         setIsLoginFailed(true);
       });
   }
-  console.log(email);
 
   return (
     <div>

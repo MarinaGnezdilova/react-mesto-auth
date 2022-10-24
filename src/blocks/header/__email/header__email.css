@@ -9,3 +9,19 @@
     padding-top: 10px;
     margin-left: 500px;
 }
+
+@media screen and (max-width: 1023px) {
+    .header__email {
+        font-size: 16px;
+        margin-left: 230px;
+    }
+  }
+
+
+@media screen and (max-width: 650px) {
+    .header__email {
+        font-size: 14px;
+        margin-left: 50px;
+        margin-left: 0;
+    }
+  }
