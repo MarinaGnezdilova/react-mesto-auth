@@ -4,7 +4,7 @@ import Card from "./Card";
 import { CurrentUserContext } from "../contexts/CurrentUserContext";
 import { CardsContext } from "../contexts/CardsContext";
 import Header from "./Header";
-import * as auth from "../components/Auth.js";
+import * as auth from "../utils/Auth.js";
 import Footer from "./Footer";
 function Main(props) {
   const [currentEmail, setCurrentEmail] = React.useState();

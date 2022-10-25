@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-import * as auth from "../components/Auth.js";
+import * as auth from "../utils/Auth.js";
 import Header from "./Header.js";
 import InfoTooltip from "./InfoTooltip.js";
 function Login(props) {

@@ -3,7 +3,7 @@ class Api {
     this._baseUrl = baseUrl;
     this._authorization = authorization;
   }
-  _checkResponce(res) {
+  _checkResponse(res) {
     if (res.ok) {
       const data = res.json();
       return data;
@@ -17,7 +17,7 @@ class Api {
       headers: {
         authorization: this._authorization,
       },
-    }).then(this._checkResponce);
+    }).then(this._checkResponse);
   }
 
   getCards() {
@@ -25,7 +25,7 @@ class Api {
       headers: {
         authorization: this._authorization,
       },
-    }).then(this._checkResponce);
+    }).then(this._checkResponse);
   }
 
   editProfile(formData) {
@@ -39,7 +39,7 @@ class Api {
         name: formData.name,
         about: formData.about,
       }),
-    }).then(this._checkResponce);
+    }).then(this._checkResponse);
   }
 
   deleteLike(idCard) {
@@ -48,7 +48,7 @@ class Api {
       headers: {
         authorization: this._authorization,
       },
-    }).then(this._checkResponce);
+    }).then(this._checkResponse);
   }
 
   setLike(idCard) {
@@ -57,7 +57,7 @@ class Api {
       headers: {
         authorization: this._authorization,
       },
-    }).then(this._checkResponce);
+    }).then(this._checkResponse);
   }
 
   changeLikeCardStatus(idCard, isLiked) {
@@ -75,7 +75,7 @@ class Api {
         name: formData.name,
         link: formData.link,
       }),
-    }).then(this._checkResponce);
+    }).then(this._checkResponse);
   }
 
   changeAvatar(avatar) {
@@ -88,7 +88,7 @@ class Api {
       body: JSON.stringify({
         avatar: avatar,
       }),
-    }).then(this._checkResponce);
+    }).then(this._checkResponse);
   }
 
   getInfoUser() {
@@ -96,7 +96,7 @@ class Api {
       headers: {
         authorization: this._authorization,
       },
-    }).then(this._checkResponce);
+    }).then(this._checkResponse);
   }
 }
 

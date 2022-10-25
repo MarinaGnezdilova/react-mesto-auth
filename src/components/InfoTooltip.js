@@ -1,4 +1,3 @@
-
 function InfoTooltip(props) {
     return (
      <section className={`popup ${props.name} ${props.isOpen ? "popup_opened" : ""}`}>
