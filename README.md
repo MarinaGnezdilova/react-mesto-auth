@@ -22,7 +22,7 @@ HTML, CSS, ReactJS.
 + Для работы с сервером реализованы методы с HTTP запросами, реализована асинхронная работа кода.
 
 ## Ссылка на проект:
-https://marinagnezdilova.github.io/mesto/
+ https://marinagnezdilova.github.io/react-mesto-auth/
 
 ## Available Scripts
 
